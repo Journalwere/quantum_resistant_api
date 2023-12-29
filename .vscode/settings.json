@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "oqs.h": "c"
+        "oqs.h": "c",
+        "stdio.h": "c"
     }
 }

@@ -1,7 +1,9 @@
-#include "liboqs/src/oqs.h"
+#include <oqs/oqs.h>
 #include <stdio.h>
 #include <string.h>
-
+#include <openssl/evp.h>
+#include <openssl/rand.h>
+#include <openssl/err.h>
 
 int main() {
     // 1. Key Generation
