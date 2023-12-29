@@ -1,1 +1,1 @@
-In line post quantum resistant encryption methods using liboqs library
+In line post-quantum-resistant encryption methods using liboqs library
