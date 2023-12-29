@@ -1,4 +1,4 @@
-#include <oqs/oqs.h>
+#include "liboqs/src/oqs.h"
 #include <stdio.h>
 #include <string.h>
 #include <openssl/aes.h>
