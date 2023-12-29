@@ -1,0 +1,16 @@
+{
+    "name": "quantum_resistant",
+    "version": "0.1.0",
+    "main": "quantum_resistant.js",
+    "scripts": {
+        "install": "node-gyp rebuild"
+    },
+    "gypfile": true,
+    "bindings": [
+        {
+            "bindings": "quantum_resistant.c",
+            "module_name": "quantum_resistant",
+            "target_name": "quantum_resistant"
+        }
+    ]
+}
