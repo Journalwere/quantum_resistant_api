@@ -1,8 +1,7 @@
 #include "liboqs/src/oqs.h"
 #include <stdio.h>
 #include <string.h>
-#include <openssl/aes.h>
-#include <openssl/rand.h>
+
 
 int main() {
     // 1. Key Generation
@@ -51,19 +50,7 @@ int main() {
     const char *plaintext = "This is the secret message.";
     
     // Check if the plaintext is within the acceptable length
-    if (strlen(plaintext) > OQS_KEM_frodokem_640_aes_length_shared_secret) {
-        fprintf(stderr, "Plaintext is too long for encryption\n");
-        return 1;
-    }
 
-    // Use the shared secret obtained during key encapsulation
-    uint8_t ciphertext[OQS_KEM_frodokem_640_aes_length_ciphertext];
-    uint8_t tag[16]; // GCM authentication tag
-    aes_gcm_encrypt((const uint8_t *)plaintext, strlen(plaintext), shared_secret_e, NULL, ciphertext, tag);
-
-    // Print ciphertext and authentication tag for encryption
-    print_hex("Ciphertext", ciphertext, OQS_KEM_frodokem_640_aes_length_ciphertext);
-    print_hex("Authentication Tag", tag, 16);
     // TODO: Choose a symmetric cipher and implement encryption using shared_secret
 
     // 4. Decryption
